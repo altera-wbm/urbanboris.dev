@@ -8,6 +8,7 @@
 - `npm run dev` - запуск в режиме разработки
 - `npm run build` - сборка проекта
 - `npm run build && npm run preview` - просмотр проекта в собранном виде
+- `npm run deploy` - для публикации проекта на GitHub Pages
 
 ## Вспомогательные команды
 - `npm run img-convert` - запускает скрипт для конвертации изображений.
