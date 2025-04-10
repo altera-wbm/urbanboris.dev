@@ -632,6 +632,47 @@ body:has(.top-menu:focus) main{
   transition:fill var(--main-transition);
 }
 
+.base-card__title::after, .btn-thin.underlined:before, .footer__grid-item a:before{
+  content:" ";
+  position:absolute;
+  width:100%;
+  height:1px;
+  bottom:0;
+  left:0;
+  pointer-events:none;
+  background:currentColor;
+  -webkit-transition:0.25s linear;
+  transition:0.25s linear;
+}
+
+.footer__grid-item a:before{
+  visibility:hidden;
+  -webkit-transform:scaleX(0);
+  -ms-transform:scaleX(0);
+      transform:scaleX(0);
+}
+
+.footer__grid-item a:hover:before, .footer__grid-item a:focus:before{
+  visibility:visible;
+  -webkit-transform:scaleX(1);
+  -ms-transform:scaleX(1);
+      transform:scaleX(1);
+}
+
+.base-card__title::after, .btn-thin.underlined:before{
+  visibility:visible;
+  -webkit-transform:scaleX(1);
+  -ms-transform:scaleX(1);
+      transform:scaleX(1);
+}
+
+.base-card__title:hover::after, .btn-thin.underlined:hover:before{
+  visibility:hidden;
+  -webkit-transform:scaleX(0);
+  -ms-transform:scaleX(0);
+      transform:scaleX(0);
+}
+
 .btn .color-square{
   aspect-ratio:1/1;
   width:16px;
@@ -715,10 +756,9 @@ body:has(.top-menu:focus) main{
   fill:#606b80;
 }
 .btn-thin.underlined{
-  border-bottom-color:var(--primary);
+  position:relative;
 }
 .btn-thin.underlined:focus{
-  border-bottom-color:#606b80;
   color:#606b80;
 }
 .btn-thin.underlined:focus svg{
@@ -984,11 +1024,6 @@ body:has(.top-menu:focus) main{
     border:none;
   }
   .base-card__title::after{
-    content:"";
-    width:100%;
-    height:1px;
-    background-color:var(--primary);
-    position:absolute;
     bottom:-7px;
   }
   .base-card__title--light::after{
@@ -1559,11 +1594,10 @@ html:has(.modal.active){
   width:-moz-fit-content;
   width:fit-content;
   min-height:20px;
+  position:relative;
 }
 .footer__grid-item a:hover, .footer__grid-item a:focus{
   color:var(--hover-color);
-  text-decoration:underline;
-  text-underline-offset:5px;
 }
 @container footer (min-width: 480px ){
   .footer__grid-item--contacts{
@@ -1737,7 +1771,6 @@ html:has(.modal.active){
     fill:#606b80;
   }
   .btn-thin.underlined:hover{
-    border-bottom-color:#606b80;
     color:#606b80;
   }
   .btn-thin.underlined:hover svg{
@@ -1861,7 +1894,8 @@ section:has(.top-banner){
   .top-banner-slider .swiper-navigation .swiper-button{
     position:absolute;
     top:50%;
-    background-color:var(--white);
+    background-color:transparent;
+    border-color:transparent;
     z-index:11;
   }
   .top-banner-slider .swiper-navigation .swiper-button-next{
@@ -1881,11 +1915,11 @@ section:has(.top-banner){
 .top-banner{
   gap:10px;
   height:100%;
-  padding:20px 10px;
+  padding:80px 10px;
 }
 @container main (min-width: 480px ){
   .top-banner{
-    padding:40px 20px;
+    padding:80px 20px;
     gap:20px;
   }
 }
@@ -2399,6 +2433,30 @@ section:has(.top-banner){
   gap:20px;
 }
 
+.top-menu__list li a span:before, .top-multilevel-menu__list-wrapper ul li a:before{
+  content:" ";
+  position:absolute;
+  width:100%;
+  height:1px;
+  bottom:0;
+  left:0;
+  pointer-events:none;
+  background:currentColor;
+  -webkit-transition:0.25s linear;
+  transition:0.25s linear;
+  visibility:hidden;
+  -webkit-transform:scaleX(0);
+  -ms-transform:scaleX(0);
+      transform:scaleX(0);
+}
+
+.top-menu__list li a:hover > span:before, .top-menu__list li a:focus > span:before, .top-multilevel-menu__list-wrapper ul li a:hover:before, .top-multilevel-menu__list-wrapper ul li a:focus:before{
+  visibility:visible;
+  -webkit-transform:scaleX(1);
+  -ms-transform:scaleX(1);
+      transform:scaleX(1);
+}
+
 body:has(.burger.active){
   overflow:hidden;
 }
@@ -2501,6 +2559,7 @@ body:has(.burger.active){
   text-transform:uppercase;
   -webkit-transition:color var(--main-transition);
   transition:color var(--main-transition);
+  position:relative;
 }
 .top-multilevel-menu__list-wrapper ul li a:hover, .top-multilevel-menu__list-wrapper ul li a:focus{
   color:var(--hover-color);
@@ -2713,6 +2772,7 @@ body:has(.burger.active){
   color:var(--primary);
   -webkit-transition:color var(--main-transition);
   transition:color var(--main-transition);
+  position:relative;
 }
 .top-menu__list li a svg{
   fill:var(--primary);
