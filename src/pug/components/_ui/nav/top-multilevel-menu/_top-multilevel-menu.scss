@@ -1,5 +1,6 @@
 @use "@pug/components/blocks/certificate-block/certificate-block";
 @forward "@styles/_extends/resets.scss";
+@forward "@styles/_extends/hover.scss";
 @use "@styles/_mixins/container-queries" as *;
 @use "@styles/_mixins/media-queries" as *;
 @use "@styles/_vars/scoped" as *;
@@ -218,10 +219,19 @@ body:has(.burger.active) {
 					font-size: 14px;
 					text-transform: uppercase;
 					transition: color var(--main-transition);
+					position: relative;
 
 					&:hover,
 					&:focus {
 						color: var(--hover-color);
+
+						&:before {
+							@extend %hover-nounderline--dinamic;
+						}
+					}
+
+					&:before {
+						@extend %hover-nounderline--static;
 					}
 				}
 			}

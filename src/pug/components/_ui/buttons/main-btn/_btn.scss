@@ -1,4 +1,5 @@
 @forward "@styles/_extends/utils.scss";
+@forward "@styles/_extends/hover.scss";
 
 @use "@styles/_mixins/container-queries" as *;
 @use "@styles/_vars/scoped" as *;
@@ -137,20 +138,29 @@ $btn-thin-hover-color: #606b80;
 		}
 
 		&.underlined {
-			border-bottom-color: var(--primary);
+			position: relative;
+
+			&:before {
+				@extend %hover-underline--static;
+			}
 
 			&:focus {
-				border-bottom-color: $btn-thin-hover-color;
 				color: $btn-thin-hover-color;
 				svg {
 					fill: $btn-thin-hover-color;
 				}
 			}
 
+			&:hover {
+				&:before {
+					@extend %hover-underline--dinamic;
+				}
+			}
+
 			@media (hover: hover) {
 				&:hover {
-					border-bottom-color: $btn-thin-hover-color;
 					color: $btn-thin-hover-color;
+
 					svg {
 						fill: $btn-thin-hover-color;
 					}

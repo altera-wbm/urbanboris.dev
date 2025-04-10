@@ -57,7 +57,8 @@ section:has(.top-banner) {
 					position: absolute;
 					top: 50%;
 
-					background-color: var(--white);
+					background-color: transparent;
+					border-color: transparent;
 					z-index: 11;
 
 					&-next {
@@ -79,10 +80,10 @@ section:has(.top-banner) {
 	@extend %flex-column;
 	gap: 10px;
 	height: 100%;
-	padding: 20px 10px;
+	padding: 80px 10px;
 
 	@include container-up("main", $mobile-width) {
-		padding: 40px 20px;
+		padding: 80px 20px;
 		gap: 20px;
 	}
 

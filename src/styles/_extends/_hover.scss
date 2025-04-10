@@ -1,0 +1,38 @@
+%hover-base {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background: currentColor;
+    -webkit-transition: 0.25s linear;
+    transition: 0.25s linear;
+}
+
+%hover-nounderline--static {
+    @extend %hover-base;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+}
+
+%hover-nounderline--dinamic {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+%hover-underline--static {
+    @extend %hover-base;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+%hover-underline--dinamic {
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+}
