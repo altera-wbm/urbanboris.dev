@@ -62,8 +62,8 @@
 
 		.badge {
 			position: absolute;
-			top: 20px;
-			left: 20px;
+			top: 10px;
+			left: 10px;
 			z-index: 11;
 
 			@include container-down("product-card", 240px) {

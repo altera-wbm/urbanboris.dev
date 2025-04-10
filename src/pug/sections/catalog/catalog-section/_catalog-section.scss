@@ -41,7 +41,7 @@
 
 	&__grid {
 		display: grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 40px 1px;
 		margin-bottom: 40px;
 
