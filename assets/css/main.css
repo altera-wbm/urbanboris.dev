@@ -2141,8 +2141,8 @@ section:has(.top-banner){
 }
 .product-card__header .badge{
   position:absolute;
-  top:20px;
-  left:20px;
+  top:10px;
+  left:10px;
   z-index:11;
 }
 @container product-card (max-width: 239px){
@@ -3170,7 +3170,7 @@ body:has(.burger.active){
 }
 .catalog-section__grid{
   display:grid;
-  grid-template-columns:1fr;
+  grid-template-columns:repeat(2, 1fr);
   gap:40px 1px;
   margin-bottom:40px;
 }
