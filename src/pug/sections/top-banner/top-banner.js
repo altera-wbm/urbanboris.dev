@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -12,8 +12,11 @@ if (slider) {
 	console.log(btnNext);
 
 	new Swiper(slider, {
-		modules: [Navigation, Pagination],
-		slidesPerView: "auto",
+		modules: [Navigation, Pagination, Autoplay],
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
 		// spaceBetween: 20,
 		slidesPerView: 1,
 
