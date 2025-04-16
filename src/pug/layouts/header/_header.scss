@@ -40,6 +40,13 @@ body:has(.top-menu:focus) {
 		// backdrop-filter: none;
 	}
 
+	transition: transform .3s linear;
+	transform: translateY(0);
+
+	&.hide {
+		transform: translateY(var(--header-height));
+	}
+
 	z-index: 99;
 
 	& > .container {

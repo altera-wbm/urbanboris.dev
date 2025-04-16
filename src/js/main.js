@@ -20,6 +20,7 @@ import "@pug/components/_ui/nav/top-multilevel-menu/burger";
 import "@pug/components/_ui/nav/top-multilevel-menu/top-multilevel-menu-expand";
 import "@pug/components/_ui/nav/top-multilevel-menu/top-multilevel-menu-toggler";
 import "@pug/components/_ui/nav/top-menu/top-menu-hover";
+import "@pug/layouts/header/header";
 // import "@pug/sections/cart/cart";
 import "@pug/sections/cart/item-remove";
 import "@pug/sections/cart/promo-field";
