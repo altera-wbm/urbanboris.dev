@@ -2,6 +2,7 @@ import Swiper from "swiper";
 import { Navigation, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 const sliders = document.querySelectorAll(".product-card-inner-slider");
 
@@ -16,6 +17,7 @@ if (sliders.length) {
 			slidesPerView: 1,
 
 			effect: "fade",
+			speed: 500,
 
 			navigation: {
 				nextEl: btnNext ? btnNext : null,
