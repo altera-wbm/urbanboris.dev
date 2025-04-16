@@ -3312,7 +3312,11 @@ body:has(.burger.active){
   width:100% !important;
 }
 .catalog-detail__grid-item--gallery .swiper .badge{
-  display:none;
+  position:absolute;
+  top:28px;
+  right:20px;
+  font-size:16px;
+  padding:10px;
 }
 @container catalog-detail (min-width: 480px ){
   .catalog-detail__grid-item--gallery .swiper .badge{
@@ -3345,6 +3349,7 @@ body:has(.burger.active){
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
+    background:transparent;
   }
 }
 @container catalog-detail (min-width: 640px ){
