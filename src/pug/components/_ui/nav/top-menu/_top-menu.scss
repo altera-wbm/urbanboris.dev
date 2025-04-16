@@ -10,7 +10,6 @@
 
 	.base-card,
 	.product-card-inner-slider {
-		aspect-ratio: 2/3;
 		height: auto;
 		aspect-ratio: 2 / 3;
 	}
@@ -121,7 +120,7 @@
 			&-section {
 				@extend %flex-column;
 				gap: 40px;
-				padding-bottom: 40px;
+				padding-bottom: 30px;
 
 				&:first-child {
 					border-right: 2px solid var(--light);
@@ -137,7 +136,7 @@
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
 				max-height: fit-content;
-				padding-bottom: 40px;
+				padding-bottom: 30px;
 
 				@include media-down(1440px) {
 					grid-template-columns: repeat(3, 1fr);
