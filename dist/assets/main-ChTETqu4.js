@@ -5663,6 +5663,7 @@ if (sliders.length) {
       modules: [Navigation, Pagination, EffectFade],
       slidesPerView: 1,
       effect: "fade",
+      speed: 500,
       navigation: {
         nextEl: btnNext ? btnNext : null,
         prevEl: btnPrev ? btnPrev : null
@@ -5876,6 +5877,20 @@ if (menus.length) {
     });
   });
 }
+let lastScrollTop = 0;
+const header = document.querySelector("header.header");
+document.documentElement.style.setProperty("--header-height", `-${header.offsetHeight}px`);
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop !== lastScrollTop) {
+    if (scrollTop > lastScrollTop) {
+      header.classList.add("hide");
+    } else {
+      header.classList.remove("hide");
+    }
+    lastScrollTop = scrollTop;
+  }
+});
 const items = document.querySelectorAll(".cart-item");
 const selectAllBtn = document.querySelector(".cart-select-all-btn");
 const removedNode = document.querySelector(".cart-removed-items span");
