@@ -70,7 +70,11 @@
 
 				.swiper {
 					.badge {
-						display: none;
+						position: absolute;
+						top: 28px;
+						right: 20px;
+						font-size: 16px;
+						padding: 10px;
 					}
 					@include container-up("catalog-detail", $mobile-width) {
 						.badge {
@@ -100,6 +104,7 @@
 					@include container-down("catalog-detail", $mobile-width) {
 						.catalog-detail-back-btn {
 							display: flex;
+							background: transparent;
 						}
 					}
 				}
