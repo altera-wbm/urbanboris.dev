@@ -1,0 +1,62 @@
+h1.base-title Адреса магазинов и контакты UNBOUND
+.store-locator
+  .store-locator__tabs
+    +main-btn({
+      tag: 'a',
+      href: '#',
+      title: 'На карте',
+      cls: 'btn-light store-locator__tab store-locator__tab--active',
+    })
+    +main-btn({
+      tag: 'a',
+      href: '#',
+      title: 'Списком',
+      cls: 'btn-light store-locator__tab',
+    })
+  .store-locator__content
+    .store-locator__maps.store-locator__tabs-item.store-locator__tabs-item--active
+      img(src=`./assets/img/map.png` alt=`` width=`1145` height=`637` )
+    .store-locator__list.store-locator__tabs-item
+      .store-locator__list-item.store-locator__item.store-locator__item--active
+        .store-locator__item-header Санкт-Питербург
+          svg(width='11' height='10' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href=`./assets/sprite.svg#icon-arrow-xs`)
+        .store-locator__item-content
+          .store-locator__item-addr г. Санкт-Петербург, пр-кт Большой П.С. 69А, помещение 5-Н
+          .store-locator__item-time Ежедневно с 11:00 до 21:00
+          .store-locator__item-bootom
+            +main-btn({
+              tag: 'a',
+              href: 'mailto:support@urbanboris.com',
+              title: 'support@urbanboris.com',
+              cls: 'btn-thin underlined store-locator__item-link',
+            })
+            +main-btn({
+              tag: 'a',
+              href: 'tel:+78047007474',
+              title: '+7 (804) 700 74 74',
+              cls: 'btn-thin underlined store-locator__item-link',
+            })
+      .store-locator__list-item.store-locator__item
+        .store-locator__item-header Санкт-Питербург
+          svg(width='11' height='10' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href=`./assets/sprite.svg#icon-arrow-xs`)
+        .store-locator__item-content
+          .store-locator__item-addr г. Санкт-Петербург, пр-кт Большой П.С. 69А, помещение 5-Н
+          .store-locator__item-time Ежедневно с 11:00 до 21:00
+          .store-locator__item-bootom
+            +main-btn({
+              tag: 'a',
+              href: 'mailto:support@urbanboris.com',
+              title: 'support@urbanboris.com',
+              cls: 'btn-thin underlined store-locator__item-link',
+            })
+            +main-btn({
+              tag: 'a',
+              href: 'tel:+78047007474',
+              title: '+7 (804) 700 74 74',
+              cls: 'btn-thin underlined store-locator__item-link',
+            })
+
+
+

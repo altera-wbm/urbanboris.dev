@@ -1,17 +1,27 @@
+@use "@styles/_mixins/media-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
 .inner-section {
 	&__wrapper {
+		margin-top: 30px;
+
 		&:has(.inner-section__sidebar) {
 			display: grid;
 			grid-template-columns: 300px auto;
 			gap: 40px;
+
+			@include media-equal-down($tablet-width) {
+				grid-template-columns: 1fr;
+			}
 		}
 	}
 
 	&__sidebar {
-		outline: 1px solid red;
+		@include media-equal-down($tablet-width) {
+			display: none;
+		}
 	}
 
 	&__content {
-		outline: 1px solid red;
 	}
 }

@@ -1,0 +1,28 @@
+.contacts
+  h2.base-title Контакты
+  .contacts__section
+    .contacts__section-title Телефон
+    .contacts__section-content
+      a(href=`tel:88047007474`) 8 (804) 700 74 74
+  .contacts__section
+    .contacts__section-title Почта
+    .contacts__section-content
+      a(href=`mailto:support@urbanboris.com`) support@urbanboris.com
+  .contacts__section.contacts__section-social
+    .contacts__section-content
+      p написать в
+        +main-btn({
+          tag: 'a',
+          href: '#',
+          title: 'whatsapp',
+          cls: 'btn-thin underlined btn-inline',
+        })
+  .contacts__section.contacts__section-social
+    .contacts__section-content
+      p написать в
+        +main-btn({
+          tag: 'a',
+          href: '#',
+          title: 'telegram',
+          cls: 'btn-thin underlined btn-inline',
+        })

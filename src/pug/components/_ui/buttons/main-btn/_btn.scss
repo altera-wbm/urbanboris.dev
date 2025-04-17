@@ -207,9 +207,7 @@ $btn-thin-hover-color: #606b80;
 			transition: transform var(--main-transition), fill var(--main-transition);
 		}
 
-		&:not(.disabled):not(.filter-opener-btn):not(.filter-row-btn):not(
-				.catalog-detail-back-btn
-			) {
+		&:not(.disabled):not(.filter-opener-btn):not(.filter-row-btn):not(.catalog-detail-back-btn):not(.store-locator__tab) {
 			&:focus {
 				background-color: var(--hover-dop-color);
 				color: var(--hover-color);
@@ -436,5 +434,9 @@ $btn-thin-hover-color: #606b80;
 				fill: var(--primary);
 			}
 		}
+	}
+
+	&-inline {
+		display: inline-flex;
 	}
 }
