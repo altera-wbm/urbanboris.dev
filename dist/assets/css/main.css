@@ -3330,7 +3330,7 @@ body:has(.burger.active){
 }
 .catalog-detail__grid-item--gallery .swiper .catalog-detail-back-btn{
   position:absolute;
-  top:20px;
+  top:28px;
   left:20px;
   display:none;
   width:40px;
