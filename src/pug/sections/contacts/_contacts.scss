@@ -143,11 +143,17 @@
 			color: var(--gray);
 		}
 
-		&-bootom {
+		&-bottom {
 			display: flex;
+			flex-wrap: wrap;
 			margin-top: 20px;
 			font-size: 12px;
 			gap: 20px;
+
+			@include media-equal-down($mobile-width) {
+				flex-direction: column;
+				gap: 10px;
+			}
 		}
 	}
 }

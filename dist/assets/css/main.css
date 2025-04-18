@@ -3735,10 +3735,12 @@ body:has(.burger.active){
   margin-top:10px;
   color:var(--gray);
 }
-.store-locator__item-bootom{
+.store-locator__item-bottom{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
   margin-top:20px;
   font-size:12px;
   gap:20px;
@@ -4348,6 +4350,13 @@ body.body-locked .search-title__wrapper{
   .store-locator__maps{
     width:100%;
     aspect-ratio:280/500;
+  }
+  .store-locator__item-bottom{
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    gap:10px;
   }
 }
 @media (max-width: 479px){
